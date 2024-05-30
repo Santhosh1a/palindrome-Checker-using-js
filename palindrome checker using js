@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome checker</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div id="wrapper">
+        <h2 style="color:aliceblue">palindreome checker</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="enter the text">
+        </div>
+        <div>
+            <button type="submit" onclick="palindrome()">calculate</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+        
+            
+        function palindrome(){
+            let res
+          let str =  document.getElementById("input").value
+         
+        const arrayStrings = str.split("");//spilit array
+        
+        const reverseArray = arrayStrings.reverse(); //reveresed array
+        const joinArray = reverseArray.join("");//join array without brackets
+        
+     
+       
+        if(str === joinArray)
+            
+            res='it is a paildrome'
+        else 
+            res="it is not a palindrome"
+
+
+
+         let result=document.getElementById("result")
+        result.innerHTML=res
+      
+
+
+      
+        }
+
+
+  
+      
+    </script>
+</body>
+</html>
